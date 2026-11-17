@@ -65,11 +65,11 @@ const Projects = () => {
       description: "Re-engineered a financial risk model using multi-source Power BI data across a £500M+ contract portfolio, reducing audit selection from days to minutes and saving 50+ hours weekly.",
       icon: <BarChart3 className="w-8 h-8" />,
       technologies: ["Power BI", "DAX", "SQL", "Risk Scoring", "Data Governance", "Process Automation"],
-      category: "Case Study",
+      category: "Featured Work",
       gradient: "from-purple-500 to-indigo-600",
       linkUrl: "https://github.com/gauravyuvrajaher",
       hideExternalButton: false,
-      actionLabel: "View Case Study",
+      actionLabel: "View Project",
       imageUrl: "/Gaurav-Aher_Preview.png",
       overview: "A transformative risk intelligence initiative across a £500M+ corporate contract portfolio to automate risk-based audit selection and executive reporting.",
       problem: "Audit selection for high-value contract portfolios was historically a manual, days-long effort prone to human oversight and delayed risk mitigation.",
@@ -145,12 +145,7 @@ const Projects = () => {
         <div className="relative">
           <Carousel opts={{ align: "start", loop: false, startIndex: 0 }} className="w-full md:px-12">
             <CarouselContent className="-ml-2 md:-ml-4">
-              {projects.map((project, index) => {
-                const hasCaseStudy = Boolean(
-                  project.overview || project.imageUrl ||
-                  project.media.images.length > 0 || project.media.videos.length > 0
-                );
-                return (
+              {projects.map((project, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/2">
                   <div className="h-full min-h-[600px]">
                     <Card className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg transition-all group overflow-hidden h-full flex flex-col">
@@ -179,12 +174,7 @@ const Projects = () => {
                           ))}
                         </div>
                       </div>
-                      <div className="flex gap-3 pt-4 mt-auto">
-                        {hasCaseStudy && (
-                          <Button variant="secondary" size="sm" className="w-full" onClick={() => setActiveProject(project)}>
-                            View Full Case Study
-                          </Button>
-                        )}
+                      <div className="pt-4 mt-auto">
                         {!project.hideExternalButton && (
                           <Button variant="outline" size="sm" className="w-full" asChild>
                             <a href={project.linkUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
@@ -198,7 +188,7 @@ const Projects = () => {
                     </Card>
                   </div>
                 </CarouselItem>
-              )})}
+              ))}
             </CarouselContent>
             <CarouselPrevious className="hidden md:flex -left-2 lg:-left-4 top-1/2 -translate-y-1/2 h-12 w-12 [&_svg]:h-8 [&_svg]:w-8" />
             <CarouselNext className="hidden md:flex -right-2 lg:-right-4 top-1/2 -translate-y-1/2 h-12 w-12 [&_svg]:h-8 [&_svg]:w-8" />

@@ -11,7 +11,7 @@ const Experience = () => {
       location: "India",
       duration: "Dec 2022 – Oct 2026",
       logo: "A",
-      logoImage: "/recell-logo.png",
+      logoImage: "/accenture-logo.svg",
       achievements: [
         { impact: "Anomaly Detection at Scale", description: "Automated anomaly detection across 10K+ employee recognition transactions, identifying 50+ conflicts of interest and policy breaches to strengthen compliance monitoring." },
         { impact: "£500M+ Contract Portfolio", description: "Re-engineered a financial risk model using multi-source Power BI data across a £500M+ contract portfolio, reducing audit selection from days to minutes and saving 50+ hours weekly." },
@@ -27,7 +27,7 @@ const Experience = () => {
       location: "India",
       duration: "Dec 2019 – Dec 2021",
       logo: "V",
-      logoImage: "/paypal-logo.png",
+      logoImage: "/viwsecurity-logo.svg",
       achievements: [
         { impact: "15-20% Precision Lift", description: "Analyzed 50K+ security and operational logs using SQL and Python; developed Isolation Forest and Random Forest models, improving detection precision by 15-20% and reducing false-positive reviews." },
         { impact: "40% Manual Effort Reduction", description: "Developed 5+ Power BI dashboards tracking security metrics, service KPIs, and operational trends, reducing manual reporting effort by 40% while managing 5+ concurrent analytics workstreams." },
@@ -42,7 +42,7 @@ const Experience = () => {
       location: "India",
       duration: "Dec 2017 – Oct 2019",
       logo: "W",
-      logoImage: "/amazon-logo.png",
+      logoImage: "/wns-logo.svg",
       achievements: [
         { impact: "AML/KYC Regulatory Risk", description: "Analyzed 10K+ customer records for AML/KYC compliance, identifying regulatory risks across a £1M+ client onboarding portfolio." },
         { impact: "500+ Fleet Safety Compliance", description: "Validated 25+ federal safety compliance categories for a US transport client operating 500+ fleet vehicles, supporting regulatory compliance and operational readiness." },
@@ -70,8 +70,8 @@ const Experience = () => {
               <CardHeader className="pb-4">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-2xl font-bold text-background shadow-lg overflow-hidden">
-                      <img src={exp.logoImage} alt={`${exp.company} logo`} className="w-full h-full object-contain p-2 bg-white" />
+                    <div className="w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-bold shadow-lg overflow-hidden border border-primary/20 bg-gray-900 flex-shrink-0">
+                      <img src={exp.logoImage} alt={`${exp.company} logo`} className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-foreground">{exp.position}</h3>
